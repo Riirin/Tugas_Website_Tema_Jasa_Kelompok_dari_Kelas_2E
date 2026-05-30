@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>Ceafood - Pesan Sekarang</title>
+    <style>
+        body {
+            background-color: #737CA1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color: white;
+        }
+        .header-title {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .form-card {
+            background-color: white;
+            color: #333;
+            width: 100%;
+            max-width: 550px;
+            margin: 0 auto 50px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            box-sizing: border-box;
+        }
+
+        .form-section {
+            margin-bottom: 25px;
+        }
+        .form-section h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #737CA1;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+            font-size: 14px;
+        }
+        .form-group input[type="text"],
+        .form-group textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 80px;
+        }
+
+        .menu-select-box {
+            background-color: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #737CA1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-info-text {
+            font-weight: bold;
+            color: #333;
+        }
+        .menu-price-text {
+            display: block;
+            font-size: 13px;
+            color: #e67e22;
+            font-weight: bold;
+        }
+        .input-qty {
+            width: 60px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .total-box {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .payment-option {
+            background-color: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #737CA1;
+            text-align: left;
+        }
+        .payment-option input {
+            margin-right: 10px;
+        }
+        .payment-subtext {
+            display: block;
+            font-size: 12px;
+            color: #666;
+            margin-left: 28px;
+            margin-top: 2px;
+        }
+
+        /* Tombol Aksi */
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .btn-submit {
+            background-color: #5d93ca;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+            flex: 2;
+        }
+        .btn-submit:hover {
+            background-color: #1a252f;
+        }
+        .btn-reset {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+            flex: 1;
+        }
+        .btn-reset:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="menu.html">Daftar Menu</a> | 
+        <a href="order.html">Pesan Sekarang</a>
+    </nav>
+
+    <div class="header-title">
+        <h1>Form Pembayaran</h1>
+    </div>
+
+    <div class="form-card">
+        <form action="#" method="post" enctype="multipart/form-data">
+            
+            <div class="form-section">
+                <h3>1. Data Pelanggan & Menu</h3>
+                
+                <div class="form-group">
+                    <label>Nama Customer</label>
+                    <input type="text" name="nama" placeholder="Masukkan nama Anda" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Alamat Pengiriman</label>
+                    <textarea name="alamat" placeholder="Tulis alamat lengkap pengiriman" required></textarea>
+                </div>
+
+            </div>
+
+            <div class="form-section">
+                <h3>2. Metode Pembayaran</h3>
+                
+                <div class="payment-option">
+                    <label>
+                        <input type="radio" name="metode" value="tf_bank" checked>
+                        <b>Transfer Bank</b>
+                        <span class="payment-subtext">BCA: 123-456-7890 a/n Ceafood</span>
+                    </label>
+                </div>
+
+                <div class="payment-option">
+                    <label>
+                        <input type="radio" name="metode" value="ewallet">
+                        <b>E-Wallet (Dana / OVO)</b>
+                        <span class="payment-subtext">Gopay / Dana: 0812-3456-7890</span>
+                    </label>
+                </div>
+
+                <div class="payment-option">
+                    <label>
+                        <input type="radio" name="metode" value="cod">
+                        <b>COD (Bayar di Tempat)</b>
+                        <span class="payment-subtext">Bayar langsung saat kurir mengantar makanan</span>
+                    </label>
+                </div>
+
+                <div class="form-group" style="margin-top: 20px;">
+                    <label>Upload Bukti Transfer</label>
+                    <input type="file" name="bukti_bayar">
+                    <small style="color: #999; margin-top: 5px;">*Abaikan jika memilih metode COD</small>
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <button type="button" class="btn-submit" onclick="window.location.href='finish.html'">
+                Konfirmasi & Bayar
+                </button>
+                <button type="reset" class="btn-reset" onclick="resetTotal()">Batal</button>
+            </div>
+
+        </form>
+    </div>
+
+    <center>
+        <hr style="border: 0.5px solid rgba(255,255,255,0.3); width: 80%;">
+        <footer>&copy; 2026 Ceafood - Mid Project Kelompok Website Jasa Delivery</footer>
+        <br>
+    </center>
+
+</body>
+</html>
